@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>Bright Computers - {{ title }}</title>
+    {% else %}
+        <title>Bright Computers</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/bootstrap.css'%}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/Like a Website CSS File.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/about.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/home.css'%}">
+</head>
+<body>
+<script type="text/javascript" src="{%static 'blog/bootstrap.js'%}"></script>
+<script type="text/javascript" src="{%static 'blog/jquery.js'%}"></script>
+<script type="text/javascript" src="{%static 'blog/bootstrap.bundle.js'%}"></script>
+<header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning font-weight-bold" href="{%url 'home'%}"><big class="active">Bright computers</big></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="collapsenavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{%url 'blog-home'%}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{%url 'blog-about'%}">About</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link text-white" href="form.html">Registration</a>
+                    </li>-->
+                    {%if user.is_authenticated%}
+                        <li class="nav-item">
+                            <a href="{% url 'post-create' %}" class="nav-link text-white">New Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'logout' %}" class="nav-link text-white">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'profile' %}" class="nav-link text-white">profile</a>
+                        </li>
+                    {%else%}
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}"class="nav-link text-white">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'register' %}"class="nav-link text-white">Registration</a>
+                        </li>
+                    {%endif%}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% block content %}
+{% endblock content %}
+<div class="jumbotron jumbotron-fluid bg-dar text-center" style="margin:0px;padding-top:20px;padding-bottom:20px">
+    <div href="#" style="color:blue;font-size:20px;" >Designed by BRIGHTCOMPUTERS.&copy;All rights reserved 2020</div><br>
+</div>
+
+</body>
+</html>

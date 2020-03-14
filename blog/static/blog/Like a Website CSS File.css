@@ -1,0 +1,185 @@
+.banner{
+    background-size:cover;
+    height:100vh;
+}
+header{
+    padding:5px 30px 0px;
+    background-color:rgba(225,225,225,0.6);
+}
+.hat{
+    float:left;
+    display:inline-block;
+}
+.title-color{
+    text-transform:uppercase;
+    color:#ff4181;
+}
+.Contact{
+    float:right;
+    font-size:20px;
+}
+.bgimg{
+    background-image:url('kitchen_adventurer_cheesecake_brownie.jp');
+    background-size:100% 100%;
+    background-attachment:fixed;
+    width:100%;
+    height:660px;
+}
+.headerset{
+    padding-top:25px;
+    box-sizing:border-box;
+}
+.headerset h2{
+    font-size:42px;
+}
+.ourservices{
+    padding:100px 0 60px;
+    height:700px;
+}
+.rowsetting{
+    margin:80px 0px !important;
+}
+.ourservices h1{
+    font-size:50px;
+    font-weight:bold;
+}
+.imgsetting{
+    border-radius:50%;
+    height:100px;
+    width:100px;
+}
+.fa-shopping-cart{
+    margin-top:20px;
+}
+.fa-desktop{
+    margin-top:26px;
+}
+.fa-lock{
+    margin-top:25px;
+}
+.rowsetting h2{
+     padding:20px;
+     font-weight:bold;
+     font-size:30px;
+ }
+.rowsetting p{
+    padding:10px;
+    color:6c757d!important;
+}
+.portfolio{
+    height:1100px;
+    width:100%;
+    padding:100px 0px 50px;
+}
+.portfolio h1{
+    font-size:50px;
+    font-weight:bold;
+}
+.card{
+    margin-top:40px;
+}
+.ourteam{
+    height:700px;
+    width:100%;
+    padding:100px 0px 60px;
+}
+.ourteam h1{
+    font-size:50px;
+    font-weight:bold;
+}
+.teamsetting{
+    margin-top:70px;
+}
+.footer{
+    height:50px;
+}
+.footer h6{
+    line-height:50px;
+}
+@media(max-width:992px){
+    .navbar-toggler{
+            margin:10px 0px 10px 30px;
+            background-color:#ff4f81;
+        }
+        .navbar-toggler:hover{
+                background-color:black;
+                border-color:#ff4f81;
+        }
+        .navbar-dark{
+                background-color:#fff;
+            }
+            .navbar-nav li a{
+                text-align:center;
+                background-color:;
+            }
+            .navbar-nav li a:hover{
+                background-color:#ff4f81;
+            }
+}
+@media(min-width:768px) and (max-width:991px){
+    .headerset h2{
+            font-size:42px;
+        }
+        .headerset h1{
+            font-size:62px;
+            font-weight:bold;
+        }
+}
+@media(min-width:575px) and (max-width:767px){
+}
+@media(min-width:480px) and (max-width:574px){
+}
+@media(max-width:479px){
+    .headerset h2{
+        font-size:22px;
+    }
+    .ourservices{
+        height:1500px;
+    }
+    .portfolio{
+        height:2300px;
+    }
+    .ourteam{
+        height:1400px;
+    }
+    iframe{
+        width:310px;
+        height:200px;
+    }
+}
+.navbar-nav li a{
+    font-size:17px;
+    padding:10px 30px!important;
+}
+.navbar-nav li a:hover{
+    border-right:3px solid #ff4f81;
+    border-left:3px solid #ff4f81;
+    transition:0.5s all;
+}
+.fonts{
+    color:white;
+}
+.content1{
+            margin-right:10px;
+            width:400px;
+            box-shadow:1px 1px 10px 2px #333;
+            border-radius:5px;
+            overflow:hidden;
+            float:right;
+            background:lightblue;
+        }
+        .header1{
+            background-color:brown;
+            padding:15px 0px;
+            color:white;
+            text-align:center;
+        }
+        .moving-body{
+            padding:4px;
+            height:360px;
+            color:black;
+        }
+.active{
+            border-right:3px solid #ff4f81;
+            border-left:3px solid #ff4f81;
+        }
