@@ -1,1 +1,1 @@
-web: gunicorn brightcomputers.wsgi --log-file-
+web: gunicorn brightcomputers.wsgi
