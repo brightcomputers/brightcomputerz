@@ -1,21 +1,111 @@
 {%extends 'blog/base.html'%}
+{% load static%}
 {% block content %}
 {% load crispy_forms_tags %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
-                {{form|crispy}}
-            </fieldset>
-            <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Sing Up</button>
-            </div>
+<style>
+    *{
+      padding:0px;
+      margin:0px;
+    }
+
+
+       input{
+           border-radius:5px;
+           border:1px solid blue;
+           height:35px;
+           width:36%;
+       }
+       input[type=email]{
+           width:36%;
+           margin-left:30px;
+
+       }
+       input[type=text]{
+           width:36%;
+           margin-left:50px;
+
+       }
+       input[type=password]{
+           width:36%;
+           margin-left:0px;
+
+       }
+
+
+       h1{
+           font-weight:bold;
+       }
+       form a{
+           margin-left:50px;
+           font-size:26px;
+           color:blue;
+           font-weight:bold;
+       }
+       .text-muted{
+         font-size:20px;
+
+       }
+
+       @media(min-width:575px) and (max-width:767px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+             width:700px;
+         }
+       }
+       @media(min-width:480px) and (max-width:574px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+             width:700px;
+         }
+         .form-group button{
+           width:300px;
+
+          }
+       }
+       @media(max-width:479px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+             width:700px;
+         }
+
+       }
+   </style>
+
+    <div class="content-section" align="center">
+
+
+      <form method="POST" >
+        <p>Join Today Bright Computers</p>
+        <h1 align="center">Create your account</h1>
+          {% csrf_token %}
+              <label for="name">User Name:</label>
+              {{form.username}}<br><br>
+
+              <label for="email">Enter Email ID:</label>
+              {{form.email}}<br><br>
+
+              <label for="pwd">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{form.password1}}<br><br>
+
+              <label for="confirm pwd">confirm password:</label>
+              {{form.password2}}<br><br>
+              <div class="form-group">
+                <button type="submit" class="btn btn-outline-info">Sign Up</button>
+              </div>
+              {{form.errors}}
+
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Already have an account?<a href="/">Sign in</a>
+                Already have an account?<a href="{%url 'login'%}">Sign in</a>
             </small>
         </div>
-    </div>
+    <div>
+
 {% endblock content %}

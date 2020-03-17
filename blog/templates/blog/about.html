@@ -1,4 +1,67 @@
+
 {% extends 'blog/base.html' %}
+{% load static%}
 {% block content %}
-    <h1>About page</h1>
+<style>
+		body{
+			font-family: tahoma;
+			text-align: justify;
+		}
+		.p{
+			margin-bottom: 30px;
+		}
+		h2{
+			margin-bottom: 47px;
+			margin-top: 12px;
+		}
+		.social-link-text{
+			margin-top: 50px;
+			margin-bottom: 25px;
+		}
+		.about-link{
+            padding-left:0px;
+		}
+		.about-link li{
+			display: inline-block;
+		}
+		.about-link li a i{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			line-height: 50px;
+			text-align: center;
+			border: 1px solid #d6c6b2;
+			margin-right: 10px;
+			font-size: 22px;
+			color: #d6c6b2;
+			transition: all 0.3s;
+		}
+		.about-link li a i:hover{
+			color: white;
+			background:  #00FFFF;
+		}
+	</style>
+<div class="container">
+<div class="row">
+    <div class="col-md-5">
+        <img src="{%static 'bright.jpg'%}"  width="450px" height="450px">
+    </div>
+    <br>
+    <div class="col-md-7 about-right">
+        <h2 class="color-3"><b>About Bright Computers</b>
+        </h2>
+        <p class="p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nesciunt sint, esse iure eius voluptatibus perspiciatis sequi fuga magni perferendis beatae ratione, nam culpa veritatis dolore sunt ut minus qui Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ea delectus doloremque adipisci autem deleniti non nostrum, suscipit soluta perferendis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores pariatur animi sunt, assumenda dicta distinctio nostrum nisi, ullam dignissimos dolor!
+        </p>
+        <ul class="about-link">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href=""><i class="fa fa-envelope-o"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+</div>
 {% endblock content %}

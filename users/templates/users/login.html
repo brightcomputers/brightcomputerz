@@ -1,21 +1,145 @@
 {% extends 'blog/base.html' %}
+{%load static%}
 {% block content %}
 {% load crispy_forms_tags %}
-    <div class="content-section">
-        <form method="post">
+<style>
+    *{
+      padding:0px;
+      margin:0px;
+    }
+
+
+       input{
+           border-radius:5px;
+           border:1px solid blue;
+           height:35px;
+           width:36%;
+       }
+
+       input[type=text]{
+           width:60%;
+           margin-left:5px;
+
+       }
+       input[type=password]{
+           width:60%;
+           margin-left:5px;
+
+       }
+
+
+       h1{
+           font-weight:bold;
+       }
+       form a{
+           margin-left:50px;
+           font-size:26px;
+           color:blue;
+           font-weight:bold;
+       }
+       .text-muted{
+         font-size:20px;
+
+       }
+       .form-group button{
+         width:200px;
+
+        }
+        form{
+          border:2px ridge black ;
+          width:550px;
+          height:auto;
+          box-shadow:1px 1px 10px 2px #333;
+
+
+        }
+
+       @media(min-width:575px) and (max-width:767px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+             width:700px;
+         }
+         input[type=text]{
+             width:50%;
+             margin-left:5px;
+
+         }
+         input[type=password]{
+             width:50%;
+             margin-left:5px;
+
+         }
+       }
+       @media(min-width:480px) and (max-width:574px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+             width:700px;
+         }
+         .form-group button{
+           width:300px;
+
+          }
+          input[type=text]{
+              width:50%;
+              margin-left:5px;
+
+          }
+          input[type=password]{
+              width:50%;
+              margin-left:5px;
+
+          }
+       }
+       @media(max-width:479px){
+         input{
+             border-radius:5px;
+             border:1px solid blue;
+             height:35px;
+
+         }
+         .form-group button{
+           width:300px;
+
+          }
+          input[type=text]{
+              width:50%;
+              margin-left:5px;
+
+          }
+          input[type=password]{
+              width:50%;
+              margin-left:5px;
+
+          }
+
+       }
+   </style>
+    <div class="content-section" align="center">
+
+              <br><br>
+            <form method="post">
+                <img src="{%static 'bright.jpg'%}" width="100px" height="100px">
+                <p>Sign in to Bright Computers</p>
+                <h2 align="center">Login</h2>
+
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                {{form|crispy}}
-            </fieldset>
-            <div class="form-group">
+            <label for="name">User Name:</label>
+            {{form.username}}<br><br>
+            <label for="pwd">Password:</label>
+            {{form.password}}
+            <div class="form-group"><br>
                 <button type="submit" class="btn btn-outline-info">Login</button>
             </div>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Don't have an account?<a href="{%url 'register'%}">Sign Up</a>
+                </small>
+            </div>
+              {{form.errors}}
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need an account?<a href="{%url 'register'%}">Sign Up</a>
-            </small>
-        </div>
     </div>
 {% endblock content %}

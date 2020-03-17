@@ -19,7 +19,7 @@
 <script type="text/javascript" src="{%static 'blog/bootstrap.js'%}"></script>
 <script type="text/javascript" src="{%static 'blog/jquery.js'%}"></script>
 <script type="text/javascript" src="{%static 'blog/bootstrap.bundle.js'%}"></script>
-<header>
+
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand text-warning font-weight-bold" href="{%url 'home'%}"><big class="active">Bright computers</big></a>
@@ -62,7 +62,7 @@
             </div>
         </div>
     </nav>
-</header>
+
 {% if messages %}
     {% for message in messages %}
         <div class="alert alert-{{ message.tags }}">
@@ -71,6 +71,8 @@
     {% endfor %}
 {% endif %}
 {% block content %}
+
+
 {% endblock content %}
 <div class="jumbotron jumbotron-fluid bg-dar text-center" style="margin:0px;padding-top:20px;padding-bottom:20px">
     <div href="#" style="color:blue;font-size:20px;" >Designed by BRIGHTCOMPUTERS.&copy;All rights reserved 2020</div><br>
