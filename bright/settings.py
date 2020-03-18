@@ -33,7 +33,8 @@ ALLOWED_HOSTS = ['brightcomputers.herokuapp.com']
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
+    'users.apps.UsersConfig',\
+    'student.apps.StudentConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -25,10 +25,24 @@
            border-right:3px solid #ff4f81;
            border-left:3px solid #ff4f81;
        }
+       table{
+         background:#ffe0ff;
+         border:ridge;
+       }
+       .t1{
+         font-size:20px;
+         font-style:bold;
+
+       }
+
    </style>
 
+      <marquee class="moving-body" onmouseover="stop();" onmouseout="start();" behavior="scroll" scrollamount="10" >
+        <li>Bright computer is providing summer spcial courses for all students </li></marquee>
+
+
       <div class="container-fluid text-left text-dark headerset">
-             <div class="carousel slide" id="demo" data-ride="carousel" style="width:70%;float:left;" scrollamount="20%">
+             <div class="carousel slide" id="demo" data-ride="carousel" style="width:100%;" scrollamount="20%">
                  <ul class="carousel-indicators">
                      <li class="active" data-target="#demo" data-slide-to="0"></li>
                      <li data-target="#demo" data-slide-to="1"></li>
@@ -40,35 +54,35 @@
                      <div class="carousel-item active">
                          <div class="row" style="margin:0px;">
                              <div class="col-lg-4">
-                                 <img src="{%static 'a.jpg'%}" alt="image" width="900" height="455">
+                                 <img src="{%static 'a.jpg'%}" alt="image" width="1300px" height="455">
                              </div>
                          </div>
                      </div>
                      <div class="carousel-item">
                          <div class="row" style="margin:0px;">
                              <div class="col-lg-4">
-                                 <img src="{%static 'b.jpg'%}" alt="image" width="900" height="455">
+                                 <img src="{%static 'b.jpg'%}" alt="image" width="1300px" height="455">
                              </div>
                          </div>
                      </div>
                      <div class="carousel-item">
                          <div class="row" style="margin:0px;">
                              <div class="col-lg-4">
-                                 <img src="{%static 'c.jpg'%}" alt="image" width="900" height="455">
+                                 <img src="{%static 'c.jpg'%}" alt="image" width="1300px" height="455">
                              </div>
                          </div>
                      </div>
                      <div class="carousel-item">
                          <div class="row" style="margin:0px;">
                              <div class="col-lg-4">
-                                 <img src="{%static 'd.jpg'%}" alt="image" width="900" height="455">
+                                 <img src="{%static 'd.jpg'%}" alt="image" width="1300px" height="455">
                              </div>
                          </div>
                      </div>
                      <div class="carousel-item">
                          <div class="row" style="margin:0px;">
                              <div class="col-lg-4">
-                                 <img src="{%static 'e.jpg'%}" alt="image" width="900" height="455">
+                                 <img src="{%static 'e.jpg'%}" alt="image" width="1300px" height="455">
                              </div>
                          </div>
                      </div>
@@ -81,14 +95,38 @@
                  </a>
              </div>
          </div>
-         <div class="content1">
-             <h1 class="header1" align="right"><i class="fa fa-bell-o"></i>Notifications</h1>
-             <marquee class="moving-body" onmouseover="stop();" onmouseout="start();" behavior="scroll" scrollamount="2" direction="up">Bright computers in kalwakurthy best</marquee>
+
+         <div class="text-center batches">
+           <h2> Upcoming batches on digital classes</h2>
+        <table border="2px" width="100%" align="center"  cellpadding="10px" cellspacing="2px">
+             <tr class="t1">
+               <th>Batch Date</th>
+               <th>Batch Timings</th>
+               <<th>Course</th>
+               <th>Register</th>
+             </tr>
+             <tr>
+               <td>20-3-2020</td>
+               <td>08am to 10am</td>
+               <td>PGDCA</td>
+               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
+             </tr>
+             <tr>
+               <td>20-5-2020</td>
+               <td>08am to 10am</td>
+               <td>PYTHON</td>
+               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
+             </tr>
+           </table>
+
+
          </div>
+
+
     <section class="location">
     <div style="margin-left:25px;margin-bottom:10px;">
-        <h1 class="text-center" style="font-size:60px;font-weight:bold;">
-          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRIGHT LOCATION</h1>
+        <h1 class="text-center" style="font-size:40px;font-weight:bold;">
+         BRIGHT LOCATION</h1>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.224811724691!2d78.48895911434397!3d16.665629927606254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bca5cbae649fa53%3A0x753365f56175ef60!2sBright%20Computers!5e0!3m2!1sen!2sin!4v1577874164634!5m2!1sen!2sin" width="99%" height="300px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 </section>
@@ -116,7 +154,7 @@
                 <h3 class="text-info">Bright Computers</h3>
                 <i class="fa fa-map-marker text-light"> Kalwakurthy,<br> Nagarkurnool, Telangana</i><br>
                 <i class="fa fa-phone text-light"> Mobile:9640449394,</i><br>
-                <i class="fa fa-envelope text-light"></i><a href="#"> brightcomputersklky@gmail.com</a>
+                <i class="fa fa-envelope text-light"></i><a href="#"> brightcomputersinfo@gmail.com</a>
             </div>
         </div>
 {% endblock content %}

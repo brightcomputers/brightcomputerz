@@ -1,0 +1,86 @@
+{% extends 'blog/base.html' %}
+{% load static%}
+{% block content %}
+
+<style>
+body{
+background:linear-gradient(to bottom right, #c9c9db,red,white,black);
+}
+#form{
+background: #e6e6ff;
+min-height:300px;
+border:ridge 8px;
+}
+.registration{
+font-size:25px;
+font-family:ALGERIAN;
+color: #b2004c;
+font-weight:700;
+}
+.form-control{
+border:2px ridge;
+border-radius:20px;
+font-family:Cooper Black;
+}
+#form1{
+background:#ffe8f7;
+height:350px;
+
+border:ridge 8px;
+}
+.selection1{
+border-radius:5px;
+}
+.col-form-label{
+font-family:Agency FB;
+}
+.form-group button{
+  width:150px;
+
+ }
+</style>
+
+<div class="container">
+     <div class="row">
+         <div class="col-md-6 col-md-offset-3" id="form">
+             <center><b class="registration">Bright Application Form</b></center>
+             <form action="{% url 'NewPage'%}" method="post">
+                 {% csrf_token %}
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >StudentName</label>
+                      <div class="col-sm-10"><input type="text" class="form-control"  name="name1" value="" minlength="4" maxlength="25"required> </div>
+                 </div>
+
+
+                 <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >FatherName</label>
+                      <div class="col-sm-10"><input type="text" class="form-control"  name="name2" minlength="4" maxlength="25" required> </div>
+                 </div>
+                 <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >Qualification:</label>
+                      <div class="col-sm-10"><input type="text" class="form-control" name="Q1" minlength="3" maxlength="25" required> </div>
+                 </div>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >Email:</label>
+                      <div class="col-sm-10"><input type="email" class="form-control"  name="mail1" minlength="4" maxlength="30" required> </div>
+                 </div>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >Address:</label>
+                      <div class="col-sm-10"><input type="text" class="form-control"  name="address1" minlength="4" maxlength="25" required> </div>
+                 </div>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" >phoneno:</label>
+                      <div class="col-sm-10"><input type="number" class="form-control" name="ph1" minlength="10" maxlength="10" required> </div>
+                 </div>
+
+                 <div class="form-group"><br>
+                    <center> <button type="submit" class="btn btn-outline-info" >submit</button></center>
+                 </div>
+             </form>
+            
+         </div>
+
+   </div>
+ </div>
+
+{% endblock content %}
