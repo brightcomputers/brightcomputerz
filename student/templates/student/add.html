@@ -1,6 +1,76 @@
 {% extends 'blog/base.html' %}
 {% load static%}
 {% block content %}
+<script>
+    function validation()
+    {
+        var student = document.getElementById('student').value;
+        var father = document.getElementById('father').value;
+        var qualification = document.getElementById('qualification').value;
+        var address = document.getElementById('address').value;
+        var mobileno = document.getElementById('mobileno').value;
+
+        if(student == ""){
+             document.getElementById('studentname').innerHTML = "please fill your name";
+             return false;
+        }
+
+        if(!isNaN(student)){
+             document.getElementById('studentname').innerHTML = "only characters are allowed";
+             return false;
+        }
+
+        if(father == ""){
+             document.getElementById('fathername').innerHTML = "please fill your fathername";
+             return false;
+        }
+
+        if(!isNaN(father)){
+             document.getElementById('fathername').innerHTML = "only characters are allowed";
+             return false;
+        }
+
+
+        if(address == ""){
+             document.getElementById('addresses').innerHTML = "please fill your address";
+             return false;
+        }
+
+        if(qualification == ""){
+             document.getElementById('quals').innerHTML = "please fill your Qualification ";
+             return false;
+        }
+
+        if(!isNaN(qualification)){
+             document.getElementById('quals').innerHTML = "only characters are allowed";
+             return false;
+        }
+
+        if(mobileno == ""){
+             document.getElementById('mobiles').innerHTML = "please fill mobile number";
+             return false;
+        }
+        if((mobileno.length < 10)){
+             document.getElementById('mobiles').innerHTML = "invalid mobile number ";
+             return false;
+        }
+        if((mobileno.length > 10)){
+             document.getElementById('mobiles').innerHTML = "invalid mobile number ";
+             return false;
+        }
+
+        if(mobileno.charAt(0)!=9 && mobileno.charAt(0)!=8 && mobileno.charAt(0)!=7 && mobileno.charAt(0)!=6)
+        {
+          document.getElementById('mobiles').innerHTML = "invalid mobile number";
+          return false;
+        }
+        else
+        {
+          confirm("You are Successfully registered").getElementById("success");
+          return false;
+        }
+    }
+</script>
 
 <style>
 body{
@@ -44,40 +114,46 @@ font-family:Agency FB;
      <div class="row">
          <div class="col-md-6 col-md-offset-3" id="form">
              <center><b class="registration">Bright Application Form</b></center>
-             <form action="{% url 'NewPage'%}" method="post">
+              <span id="success" style="color:green"></span><br><br>
+             <form action="{% url 'NewPage'%}" method="post" onsubmit="return validation()">
                  {% csrf_token %}
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" >StudentName</label>
-                      <div class="col-sm-10"><input type="text" class="form-control"  name="name1" value="" minlength="4" maxlength="25"required> </div>
+                      <div class="col-sm-10"><input type="text" id="student" class="form-control"  name="name1" value="" minlength="4" maxlength="25" autocomplete="off" required > </div>
+                      <span id="studentname" class="text-danger font-weight-bold"></span>
                  </div>
 
 
                  <div class="form-group row">
-                      <label class="col-sm-2 col-form-label" >FatherName</label>
-                      <div class="col-sm-10"><input type="text" class="form-control"  name="name2" minlength="4" maxlength="25" required> </div>
+                      <label class="col-sm-2 col-form-label" >course</label>
+                      <div class="col-sm-10"><input type="text" id="father" class="form-control"  name="name2" minlength="4" maxlength="25" autocomplete="off" required> </div>
+                      <span id="fathername" class="text-danger font-weight-bold"></span>
                  </div>
                  <div class="form-group row">
                       <label class="col-sm-2 col-form-label" >Qualification:</label>
-                      <div class="col-sm-10"><input type="text" class="form-control" name="Q1" minlength="3" maxlength="25" required> </div>
+                      <div class="col-sm-10"><input type="text" id="qualification" class="form-control" name="Q1" minlength="3" maxlength="25" autocomplete="off" required> </div>
+                      <span id="quals" class="text-danger font-weight-bold"></span>
                  </div>
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" >Email:</label>
-                      <div class="col-sm-10"><input type="email" class="form-control"  name="mail1" minlength="4" maxlength="30" required> </div>
+                      <div class="col-sm-10"><input type="email" class="form-control"  name="mail1" minlength="4" maxlength="30" autocomplete="off" required> </div>
                  </div>
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" >Address:</label>
-                      <div class="col-sm-10"><input type="text" class="form-control"  name="address1" minlength="4" maxlength="25" required> </div>
+                      <div class="col-sm-10"><input type="text"  id="address" class="form-control"  name="address1" minlength="4" maxlength="25" autocomplete="off" required> </div>
+                      <span id="addresses" class="text-danger font-weight-bold"></span>
                  </div>
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" >phoneno:</label>
-                      <div class="col-sm-10"><input type="number" class="form-control" name="ph1" minlength="10" maxlength="10" required> </div>
+                      <div class="col-sm-10"><input type="number" id="mobileno" class="form-control" name="ph1" minlength="10" maxlength="10" autocomplete="off" required> </div>
                  </div>
 
                  <div class="form-group"><br>
                     <center> <button type="submit" class="btn btn-outline-info" >submit</button></center>
+                    <span id="mobiles" class="text-danger font-weight-bold"></span>
                  </div>
              </form>
-            
+
          </div>
 
    </div>
