@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load static%}
 {% block content %}
+
 <style>
        *{
            margin:0px;
@@ -41,6 +42,68 @@
 
    		}
 
+.card{
+  font-family: "Candara", sans-serif;
+  width: 350px;
+  height:450px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding:none;
+  }
+
+.card-image img{
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-image img{
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin-top: -75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 10px solid #fff;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.profile-image img:hover{
+  transform: scale(1.1);
+}
+
+.card-content h3{
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+.card-content p{
+  font-size: 16px;
+  text-align: justify;
+  padding: 0 20px 5px 20px;
+}
+.card-box{
+  flex-wrap: wrap;
+  width: 100%;
+  height:auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding:10px;
+}
+
 
    </style>
    <div><br>
@@ -51,65 +114,184 @@
       <marquee class="moving-body" onmouseover="stop();" onmouseout="start();" behavior="scroll" scrollamount="10" >
         <li>Bright computer is providing summer spcial courses for all students </li></marquee>
 
-<section class="container ourservices text-center">
-    <h1> Our Services</h1>
-    <p>Bright Computers Provide Some Services</p>
-    <div class="row rowsetting">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                <div class="imgsetting d-block m-auto bg-warning">
-                    <i class="fa fa-shopping-cart fa-3x text-white"></i>
-                </div>
-                <h2>Web Development</h2>
-                <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                       This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                  <div class="imgsetting d-block m-auto bg-warning">
-                      <i class="fa fa-desktop fa-3x text-white"></i>
-                  </div>
-                    <h2>Graphic design</h2>
-                    <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                        This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                  <div class="imgsetting d-block m-auto bg-warning">
-                      <i class="fa fa-lock fa-3x text-white"></i>
-                  </div>
-                    <h2>SEO</h2>
-                    <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                        This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-          </div>
-      </div>
-  </section>
-  <section class="container ourservices text-center">
-      <div class="row rowsetting">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                  <div class="imgsetting d-block m-auto bg-warning">
-                      <i class="fa fa-shopping-cart fa-3x text-white"></i>
-                  </div>
-                  <h2>Software Training</h2>
-                  <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                         This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                    <div class="imgsetting d-block m-auto bg-warning">
-                        <i class="fa fa-desktop fa-3x text-white"></i>
-                    </div>
-                      <h2>Job Fsreelance</h2>
-                      <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                          This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-                    <div class="imgsetting d-block m-auto bg-warning">
-                        <i class="fa fa-lock fa-3x text-white"></i>
-                    </div>
-                      <h2>Computers Education</h2>
-                      <p>Basic computer knowledge is as important to a banker as a paper is to a publisher.
-                          This basic computer knowledge section covers many important questions for IBPS PO, SBI and RBI like exams and other similar tests.</p>
-            </div>
-        </div>
-    </section>
 
+        <div class="text-center batches">
+          <h2> Upcoming batches on digital classes</h2>
+       <table border="2px" width="100%" align="center"  cellpadding="10px" cellspacing="2px">
+            <tr class="t1">
+              <th>Batch Date</th>
+              <th>Batch Timings</th>
+              <<th>Course</th>
+              <th>Register</th>
+            </tr>
+            <tr>
+              <td>01-04-2020</td>
+              <td>09am to 10am</td>
+              <td>PGDCA</td>
+              <td><a href="{%url 'NewPage'%}">Register Now</a></td>
+            </tr>
+            <tr>
+              <td>01-04-2020</td>
+              <td>10am to 11am</td>
+              <td>software Training</td>
+              <td><a href="{%url 'NewPage'%}">Register Now</a></td>
+            </tr>
+          </table>
+
+
+        </div>
+
+<section class="" >
+    <h1 class="text-center"style="font-size:60px;font-weight:bold;"> Our Services</h1>
+    <div class="card-box">
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'web.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>Web Development</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'gd.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>Graphic Design</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'seo.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>SEO</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+
+
+</div>
+</section>
+<section class="" >
+
+    <div class="card-box">
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'st.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>Software Training</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'cb.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>Computer Education</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+   <div class="card">
+     <div class="card-image">
+       <img src="{% static 'bgstar.jpg'%}" alt="">
+     </div>
+     <div class="profile-image">
+       <img src="{% static 'job.jpg'%}" alt="">
+     </div>
+     <div class="card-content">
+       <h3>Job & Freelancing</h3>
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+     </div>
+
+   </div>
+
+
+</div>
+</section>
+</div>
+
+<div class="" style="background:#7dffff;">
+    <h1 class="text-center" style="font-size:60px;font-weight:bold;">
+     our Courses</h1>
+<center>
+  <table id="courses"align="center" cellspacing="0px" bgcolor="#ebebe0" height="auto">
+            <tr><td> <button class="py"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">ComputerBasics</a></button></td>
+                <td> <button class="c1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">C,C++</a></button></td>
+
+
+              </tr>
+              <tr><td> <button class="we1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">MS-Office</a></button></td>
+                <td> <button class="or1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Python</a></button></td>
+             </tr>
+
+                <tr>
+                   <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">DTP</a></button></td>
+                    <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">WebDesigning</a></button></td>
+                </tr>
+
+
+
+              <tr><td> <button class="pg1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Typing</a></button></td>
+                <td> <button class="dt1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Django</a></button></td>
+
+
+              </tr>
+              <tr><td> <button class="page1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Internet</a></button></td>
+                <td> <button class="dc1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">html</a></button></td>
+
+
+              </tr>
+              <tr>
+               <td> <button class="ja1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Photoshop</a></button></td>
+               <td> <button class="int1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">css</a></button></td>
+
+              <tr>
+                 <td> <button class="do1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Pagemaker</a></button></td>
+               <td> <button class="c2"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Javascript</a></button></td>
+              </tr>
+              <tr>
+                <td> <button class="ta1" ><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">CoralDraw</a></button></td>
+                <td> <button class="ms1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Bootstrap</a></button></td>
+              </tr>
+              <tr>
+                 <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">PGDCA</a></button></td>
+                  <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">Jquery</a></button></td>
+              </tr>
+
+              <tr>
+                 <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">DCA</a></button></td>
+                  <td> <button class="phot1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">DBMS(MySQL)</a></button></td>
+              </tr>
+
+
+  </table>
+  </center>
+  </div>
       <div class="container-fluid text-left text-dark headerset">
              <div class="carousel slide" id="demo" data-ride="carousel" style="width:100%;" scrollamount="20%">
                  <ul class="carousel-indicators">
@@ -165,31 +347,7 @@
              </div>
          </div>
 
-         <div class="text-center batches">
-           <h2> Upcoming batches on digital classes</h2>
-        <table border="2px" width="100%" align="center"  cellpadding="10px" cellspacing="2px">
-             <tr class="t1">
-               <th>Batch Date</th>
-               <th>Batch Timings</th>
-               <<th>Course</th>
-               <th>Register</th>
-             </tr>
-             <tr>
-               <td>20-3-2020</td>
-               <td>08am to 10am</td>
-               <td>PGDCA</td>
-               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
-             </tr>
-             <tr>
-               <td>20-5-2020</td>
-               <td>08am to 10am</td>
-               <td>PYTHON</td>
-               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
-             </tr>
-           </table>
 
-
-         </div>
 
 
     <section class="location">

@@ -39,8 +39,170 @@
 			color: white;
 			background:  #00FFFF;
 		}
+
 	</style>
-	  <center><h2 class="color-3" ><b>this page is under constuction</b></h2></center>
+	<style>
+	.card{
+	  font-family: "Candara", sans-serif;
+	  width: 350px;
+	  height:450px;
+	  overflow: hidden;
+	  background: #fff;
+	  border-radius: 10px;
+	  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	  display: flex;
+	  flex-direction: column;
+	  padding:none;
+	  }
+
+	.card-image img{
+	  width: 100%;
+	  height: 160px;
+	  border-top-left-radius: 10px;
+	  border-top-right-radius: 10px;
+	  object-fit: cover;
+	}
+
+	.profile-image img{
+	  z-index: 1;
+	  width: 120px;
+	  height: 120px;
+	  position: relative;
+	  margin-top: -75px;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  border-radius: 100px;
+	  border: 10px solid #fff;
+	  transition-duration: 0.4s;
+	  transition-property: transform;
+	}
+
+	.profile-image img:hover{
+	  transform: scale(1.1);
+	}
+
+	.card-content h3{
+	  font-size: 25px;
+	  text-align: center;
+	  margin: 0;
+	}
+
+	.card-content p{
+	  font-size: 16px;
+	  text-align: justify;
+	  padding: 0 20px 5px 20px;
+	}
+	.card-box{
+	  flex-wrap: wrap;
+	  width: 100%;
+	  height:auto;
+	  display: flex;
+	  justify-content: space-around;
+	  align-items: center;
+	  overflow: hidden;
+	  padding:10px;
+	}
+
+
+	   </style>
+	<div class="">
+
+
+	<section class="" >
+			<h1 class="text-center"style="font-size:60px;font-weight:bold;"> Our Services</h1>
+			<div class="card-box">
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'web.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>Web Development</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'gd.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>Graphic Design</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'seo.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>SEO</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+
+
+	</div>
+	</section>
+	<section class="" >
+
+			<div class="card-box">
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'st.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>Software Training</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'cb.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>Computer Education</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+		 <div class="card">
+			 <div class="card-image">
+				 <img src="{% static 'bgstar.jpg'%}" alt="">
+			 </div>
+			 <div class="profile-image">
+				 <img src="{% static 'job.jpg'%}" alt="">
+			 </div>
+			 <div class="card-content">
+				 <h3>Job & Freelancing</h3>
+				 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			 </div>
+
+		 </div>
+
+
+	</div>
+	</section>
+	</div>
+
 
 <section class="location">
 <div style="margin-left:25px;margin-bottom:10px;">

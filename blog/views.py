@@ -63,3 +63,6 @@ def about(request):
 
 def services(request):
     return render(request,'blog/services.html')
+
+def courses(request):
+    return render(request,'blog/courses.html')
