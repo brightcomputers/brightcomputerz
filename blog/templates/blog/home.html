@@ -26,7 +26,7 @@
            border-right:3px solid #ff4f81;
            border-left:3px solid #ff4f81;
        }
-       table{
+       #table1{
          background:#ffe0ff;
          border:ridge;
        }
@@ -35,7 +35,7 @@
          font-style:bold;
 
        }
-       img{
+       {
    			border:1px solid blue;
    			border-radius:20px
 
@@ -104,20 +104,77 @@
   padding:10px;
 }
 
+.footera{
+  color:yellow;
+}
+.footerb{
+  color:yellow;
+}
 
    </style>
-   <div><br>
-      <center> <img src="{%static 'brighthome.jpg'%}" alt="image" width="96%" height="400" style="align:center">
-   </center>
- </div>
+
+ <div class="container-fluid text-left text-dark headerset">
+        <div class="carousel slide" id="demo" data-ride="carousel" style="width:100%;" scrollamount="20%">
+            <ul class="carousel-indicators">
+                <li class="active" data-target="#demo" data-slide-to="0"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            <div class="carousel-inner box text-center">
+                <div class="carousel-item active">
+                    <div class="row" style="margin:0px;">
+                        <div class="col-lg-4">
+                            <img src="{%static 'a.jpg'%}" alt="image" width="1300px" height="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="margin:0px;">
+                        <div class="col-lg-4">
+                            <img src="{%static 'b.jpg'%}" alt="image" width="1300px" height="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="margin:0px;">
+                        <div class="col-lg-4">
+                            <img src="{%static 'c.jpg'%}" alt="image" width="1300px" height="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="margin:0px;">
+                        <div class="col-lg-4">
+                            <img src="{%static 'd.jpg'%}" alt="image" width="1300px" height="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="margin:0px;">
+                        <div class="col-lg-4">
+                            <img src="{%static 'e.jpg'%}" alt="image" width="1300px" height="400 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
 
       <marquee class="moving-body" onmouseover="stop();" onmouseout="start();" behavior="scroll" scrollamount="10" >
-        <li>Bright computer is providing summer spcial courses for all students </li></marquee>
+        <li>Bright Computers is providing summer spcial courses .New Batches start from April 06 2020 </li></marquee>
 
 
         <div class="text-center batches">
           <h2> Upcoming batches on digital classes</h2>
-       <table border="2px" width="100%" align="center"  cellpadding="10px" cellspacing="2px">
+       <table border="2px" width="100%" align="center"  cellpadding="10px" cellspacing="2px" id="table1">
             <tr class="t1">
               <th>Batch Date</th>
               <th>Batch Timings</th>
@@ -125,13 +182,13 @@
               <th>Register</th>
             </tr>
             <tr>
-              <td>01-04-2020</td>
+              <td>06-04-2020</td>
               <td>09am to 10am</td>
               <td>PGDCA</td>
               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
             </tr>
             <tr>
-              <td>01-04-2020</td>
+              <td>06-04-2020</td>
               <td>10am to 11am</td>
               <td>software Training</td>
               <td><a href="{%url 'NewPage'%}">Register Now</a></td>
@@ -140,6 +197,8 @@
 
 
         </div>
+<div class="">
+
 
 <section class="" >
     <h1 class="text-center"style="font-size:60px;font-weight:bold;"> Our Services</h1>
@@ -238,7 +297,7 @@
 <div class="" style="background:#7dffff;">
     <h1 class="text-center" style="font-size:60px;font-weight:bold;">
      our Courses</h1>
-<center>
+<marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();"scrollamount="10">
   <table id="courses"align="center" cellspacing="0px" bgcolor="#ebebe0" height="auto">
             <tr><td> <button class="py"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">ComputerBasics</a></button></td>
                 <td> <button class="c1"><a href="{%url 'blog-courses'%}" style="text-decoration:none;font-size:20px;">C,C++</a></button></td>
@@ -290,62 +349,19 @@
 
 
   </table>
-  </center>
-  </div>
-      <div class="container-fluid text-left text-dark headerset">
-             <div class="carousel slide" id="demo" data-ride="carousel" style="width:100%;" scrollamount="20%">
-                 <ul class="carousel-indicators">
-                     <li class="active" data-target="#demo" data-slide-to="0"></li>
-                     <li data-target="#demo" data-slide-to="1"></li>
-                     <li data-target="#demo" data-slide-to="2"></li>
-                     <li data-target="#demo" data-slide-to="3"></li>
-                     <li data-target="#demo" data-slide-to="4"></li>
-                 </ul>
-                 <div class="carousel-inner box text-center">
-                     <div class="carousel-item active">
-                         <div class="row" style="margin:0px;">
-                             <div class="col-lg-4">
-                                 <img src="{%static 'a.jpg'%}" alt="image" width="1300px" height="400">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="carousel-item">
-                         <div class="row" style="margin:0px;">
-                             <div class="col-lg-4">
-                                 <img src="{%static 'b.jpg'%}" alt="image" width="1300px" height="400">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="carousel-item">
-                         <div class="row" style="margin:0px;">
-                             <div class="col-lg-4">
-                                 <img src="{%static 'c.jpg'%}" alt="image" width="1300px" height="400">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="carousel-item">
-                         <div class="row" style="margin:0px;">
-                             <div class="col-lg-4">
-                                 <img src="{%static 'd.jpg'%}" alt="image" width="1300px" height="400">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="carousel-item">
-                         <div class="row" style="margin:0px;">
-                             <div class="col-lg-4">
-                                 <img src="{%static 'e.jpg'%}" alt="image" width="1300px" height="400 ">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                     <span class="carousel-control-prev-icon"></span>
-                 </a>
-                 <a class="carousel-control-next" href="#demo" data-slide="next">
-                     <span class="carousel-control-next-icon"></span>
-                 </a>
-             </div>
-         </div>
+
+
+
+
+
+
+
+    </marquee>
+    </div>
+
+
+
+
 
 
 
@@ -358,30 +374,45 @@
     </div>
 </section>
     <div class="container-fluid">
-        <div class="row bg-dark links">
+        <div class="row  links" style="background:#000066;">
             <div class="col-md-4">
-                <h1 style="color:white;font-weight:bold;"><u>Web Designing</u></h1>
-                <a href="#">C language</a><br>
-                <a href="#">Python</a><br>
-                <a href="#">Django,SQL</a><br>
-                <a href="#">HTML5,CSS3</a><br>
-                <a href="#">JAVASCRIPT</a><br>
-                <a href="#">BOOTSTRAP,JQUERY</a><br>
+                <h1 style="color:white;font-weight:bold;"><u>Our Courses</u></h1>
+                <a href="{%url 'blog-courses'%}" class="footera">C language</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">Python</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">Django,SQL</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">HTML5,CSS3</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">JAVASCRIPT</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">BOOTSTRAP,JQUERY</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">PGDCA</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">PHOTOSHOP</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">CORELDRAW</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">PAGEMAKER</a><br>
+                <a href="{%url 'blog-courses'%}"class="footera">DTP</a><br>
+
             </div>
             <div class="col-md-4">
-                <h1 style="color:white;font-weight:bold;"><u>PGDCA</u></h1>
-                <a href="#">MS OFFICE</a><br>
-                <a href="#">PHOTOSHOP</a><br>
-                <a href="#">CORELDRAW</a><br>
-                <a href="#">PAGEMAKER</a><br>
-                <a href="#">TELUGU AND ENGLISH TYPING</a><br>
+                <h1 style="color:white;font-weight:bold;"><u>Our Services</u></h1>
+                <a href="{%url 'blog-services'%}"class="footerb">Web Development</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">SEO</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">Graphic Design</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">software Training</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">Computer Education</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">placements</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">Job & Freelancing</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">DTP Works</a><br>
+                <a href="{%url 'blog-services'%}"class="footerb">Online Works</a><br>
+
             </div>
             <div class="col-md-4">
                 <h1 style="color:white;font-weight:bold;"><u>Contact Us</u></h1>
-                <h3 class="text-info">Bright Computers</h3>
-                <i class="fa fa-map-marker text-light"> Kalwakurthy,<br> Nagarkurnool, Telangana</i><br>
-                <i class="fa fa-phone text-light"> Mobile:9640449394,</i><br>
-                <i class="fa fa-envelope text-light"></i><a href="#"> brightcomputersinfo@gmail.com</a>
+                <h3 style="color:yellow">Bright Computers</h3>
+                <i class="fa fa-map-marker" style="color:yellow;font-weight:bold;font-size:20px"> Kalwakurthy,<br> Nagarkurnool, Telangana</i><br>
+                <h3 style="color:white;font-weight:bold;"><u>Call Us</u></h3>
+                <i class="fa fa-phone" style="color:yellow"> Mobile:9640449394,8555848521</i><br>
+                <h3 style="color:white;font-weight:bold;"><u>Mail us</u></h3>
+                <i class="fa fa-envelope " style="color:yellow"></i><a href="/"class="footera"> brightcomputersinfo@gmail.com</a>
+                <h3 style="color:white;font-weight:bold;"><u> whatsapp us</u></h3>
+                <i class="fa fa-whatsapp" style="color:yellow">9640449394,</i><br>
             </div>
         </div>
 {% endblock content %}

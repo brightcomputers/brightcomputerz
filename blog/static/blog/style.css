@@ -121,6 +121,23 @@
               width:50px;
 
             }
+            #courses{
+               width:300px;
+
+             }
+             #ma{
+               height: 50px;
+               width: 50px;
+             }
+             #icon{
+               height: 50px;
+               width: 50px;
+
+             }
+             .Contact{
+                 float:none;
+                 font-size:20px;
+             }
 
 }
 @media(min-width:768px) and (max-width:991px){
@@ -151,6 +168,23 @@
         .ourteam{
             height:1400px;
         }
+        #courses{
+           width:300px;
+
+         }
+         #ma{
+           height: 50px;
+           width: 50px;
+         }
+         #icon{
+           height: 50px;
+           width: 50px;
+
+         }
+         .Contact{
+             float:none;
+             font-size:20px;
+         }
 
 }
 @media(min-width:575px) and (max-width:767px){
@@ -181,6 +215,10 @@
     img{
       width:100%;
     }
+    #ma{
+      height: 50px;
+      width: 50px;
+    }
     #propic{
       height: 50px;
       width:50px;
@@ -191,6 +229,19 @@
       height: 50px;
       width:50px;
     }
+    #courses{
+       width:300px;
+
+     }
+     #icon{
+       height: 50px;
+       width: 50px;
+
+     }
+     .Contact{
+         float:none;
+         font-size:20px;
+     }
 
 }
 .navbar-nav li a{

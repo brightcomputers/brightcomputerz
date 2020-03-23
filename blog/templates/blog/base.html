@@ -23,7 +23,7 @@
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand text-warning font-weight-bold" href="{%url 'home'%}"><big class="active">Bright computers</big></a>
+            <a class="navbar-brand text-warning font-weight-bold" href="{%url 'home'%}"><big class="active">BRIGHT CMPUTERS</big></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,7 +50,7 @@
                     </li>-->
                     {%if user.is_authenticated%}
                         <li class="nav-item">
-                            <a href="{% url 'post-create' %}" class="nav-link text-white">New Post</a>
+                            <a href="{% url 'post-create' %}" class="nav-link text-white">Post</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'logout' %}" class="nav-link text-white">Logout</a>
@@ -82,9 +82,11 @@
 
 
 {% endblock content %}
-<div class="jumbotron jumbotron-fluid bg-dar text-center" style="margin:0px;padding-top:20px;padding-bottom:20px">
-    <div href="#" style="color:blue;font-size:20px;" >Designed by BRIGHTCOMPUTERS.&copy;All rights reserved 2020</div><br>
-</div>
+<div class="container-fluid text-center" style="padding:0px 0px 0px 0px ">
+    <div class="row  links " style="background: #66ffff;padding:0px 0px 20px 0px;font-size:20px">
+        <center>&copy;All Copy Rights Reserved and Designed By Bright Computers </center>
+
+    </div>
 
 </body>
 </html>
