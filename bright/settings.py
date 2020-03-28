@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$k=%h&3zhg83n-k%l@=8(*x-vtgf&b-tv$=$^^%d!hye@9+)$_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['brightcomputers.herokuapp.com']
 
@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['brightcomputers.herokuapp.com']
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',\
+    'users.apps.UsersConfig',
     'student.apps.StudentConfig',
     'crispy_forms',
     'django.contrib.admin',
@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'robots',
 ]
 SITE_ID=1
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
